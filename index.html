@@ -173,14 +173,14 @@
 
     window.addEventListener('load', function(){
         alert('llll')
-        // if(md.phone().length|| md.tablet().length||md.mobile().length){
-        //     alert("md.mobile()")
-        //     if(md.os() === 'iOS'){
-        //         alert('ios')
-        //     } else{
-        //         alert('other mobile')
-        //     }
-        // }
+        if(md.phone().length|| md.tablet().length||md.mobile().length){
+            alert("md.mobile()")
+            if(md.os() === 'iOS'){
+                alert('ios')
+            } else{
+                alert('other mobile')
+            }
+        }
 
 
     },false)
