@@ -1,6 +1,10 @@
 h1, h2 {
   font-family: Lato;
 }
+body{
+    background-color: #d4caca;
+    font-weight: 600;
+}
 
 .d-inline-flexy {
     display: -webkit-inline-flex;
