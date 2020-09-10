@@ -170,17 +170,45 @@
     var md = new MobileDetect(window.navigator.userAgent);
     const mob = document.getElementById('MOB');
     mob.innerHTML = md.os()+md.version('iOS') + typeof(md.os());
+    console.log(md)
+    let mobilePlatform = false;
+    let device = '';
+
+    let ph = function(){
+        if(!md.phone()){
+            return 0
+        } return md.phone()
+        
+    }
+    let mo = function(){
+        if(!md.mobile()){
+            return false
+        } return md.mobile()
+    }
+    let tb = function(){
+        if(!md.tablet()){
+            return false
+        } return md.tablet()
+    }
+    // let mo = md.mobile()
+    // let tb = md.tablet()
+    console.log(ph(), mo(), tb(), mobilePlatform)
+
+
+    if(ph() && mo() && tb()){
+            // if(md.os() === 'iOS'){
+            //     alert('ios')
+            // } else{  
+            //     alert('other mobile')
+            // }
+            alert('mob')
+    } else{
+        alert('web')
+    }
+
 
     window.addEventListener('load', function(){
-        alert('llll')
-        if(md.phone().length|| md.tablet().length||md.mobile().length){
-            alert("md.mobile()")
-            if(md.os() === 'iOS'){
-                alert('ios')
-            } else{
-                alert('other mobile')
-            }
-        }
+        console.log('loaded')
 
 
     },false)
