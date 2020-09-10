@@ -1,0 +1,8 @@
+{
+  "name": "js-wathlw",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "jquery": "1.9.1 - 3"
+  }
+}

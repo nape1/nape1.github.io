@@ -1,0 +1,50 @@
+h1, h2 {
+  font-family: Lato;
+}
+
+.d-inline-flexy {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+.d-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.con{
+    background-color: #dadada;
+    border:1px solid #ec3030;
+}
+
+button{
+    padding: .33rem .77rem;
+    border: none;
+    background-color: #5fca64;
+    margin: 0 1em !important;
+}
+
+.mc-content-wrapper .page-content .header {
+    border-bottom: 1px solid #dcdbdb;
+    margin-bottom: 20px;
+    z-index: 10;
+    overflow: auto;
+}
+.qstnr-wrapper {
+    border: 1px solid #f6f6f6;
+    padding: .4em 1.3em;
+    cursor: pointer;
+    border-radius: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #867b7b;
+    margin-right: 10px;
+    height: 2.8rem;
+    margin-bottom: .5em;
+    font-size: 1rem;
+    transition: all .3s linear;
+    -webkit-align-items: center;
+    align-items: center;
+    
+}
