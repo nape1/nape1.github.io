@@ -85,7 +85,7 @@
     appDiv.innerHTML = navigator.userAgent;
     // ro.innerHTML=window.navigator.userAgent.substr(window.navigator.userAgent.indexOf("OS") + 3,6).replace('_','.');
 //___________________________________________________________________________________________
-    let checkVersion = function () {
+    var checkVersion = function () {
     var agent = window.navigator.userAgent,
     start = agent.indexOf( 'OS ' );
         if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
