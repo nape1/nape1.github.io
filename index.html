@@ -192,10 +192,11 @@
         if(md.os() === 'iOS'){
             mob.innerHTML = 'ios';
         } else{  
-            mob.innerHTML = 'other mobile';
+            mob.innerHTML =`${md.os()}`;
         }
     } else{
         mob.innerHTML = 'web';
+        mob.innerHTML =`${md.os()}`;
     }
 
 
