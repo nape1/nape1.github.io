@@ -93,9 +93,8 @@
             return version
         }
     }
-    if(checkVersion()){
-        // get ios versio as 7.1
-        ro.innerHTML=checkVersion();
+    if(checkVersion() <=9){
+        ro.innerHTML='not wroking'
     }
 //___________________________________________________________________________________________-
 
