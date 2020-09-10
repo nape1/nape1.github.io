@@ -82,19 +82,19 @@
     const appDiv = document.getElementById('app');
     appDiv.innerHTML = navigator.userAgent;
 //___________________________________________________________________________________________
-    // checkVersion = function () {
-    // var agent = window.navigator.userAgent,
-    // start = agent.indexOf( 'OS ' );
-    // if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
-    //     return window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
-    // }
-    // return 0;
-    // }
-    // const ro = document.getElementById('RO');
-    // if(checkVersion){
-    //     // get ios versio as 7.1
-    //     ro.innerHTML=checkVersion();
-    // }
+    checkVersion = function () {
+    var agent = window.navigator.userAgent,
+    start = agent.indexOf( 'OS ' );
+        if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
+            console.log(window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) ));
+        }
+        return 0;
+    }
+    const ro = document.getElementById('RO');
+    if(checkVersion){
+        // get ios versio as 7.1
+        ro.innerHTML=checkVersion();
+    }
 //___________________________________________________________________________________________-
 
 // if(window.navigator.userAgent.match( /iP(hone|od|ad)/)){
@@ -165,7 +165,8 @@
 //     }
 // }, false)
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
+<!-- ____________________________________________________________________________________________________ -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
 <script>
     var md = new MobileDetect(window.navigator.userAgent);
     const mob = document.getElementById('MOB');
@@ -199,13 +200,12 @@
         mob.innerHTML =`${md.os()}`;
     }
 
+window.addEventListener('load', function(){
+    console.log('loaded')
 
-    window.addEventListener('load', function(){
-        console.log('loaded')
+},false)
 
-
-    },false)
-</script>
+</script> -->
 
 
 </body>
