@@ -17,6 +17,8 @@
 <div id="app"></div>
 <br/>
 <div id="RO"></div>
+<br/>
+<div id="MOB"></div>
 <!-- <div class="mc-content-wrapper">
     <div class="con">
         <button>1</button>
@@ -159,6 +161,8 @@ window.addEventListener('load', function(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
 <script>
     var md = new MobileDetect(window.navigator.userAgent);
+    const mob = document.getElementById('MOB');
+    mob.innerHTML = navigator.userAgent;
     // ... see below
     console.log(md.os())
 </script>
