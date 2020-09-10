@@ -81,20 +81,21 @@
 <script>
     const appDiv = document.getElementById('app');
     appDiv.innerHTML = navigator.userAgent;
-
-    checkVersion = function () {
-    var agent = window.navigator.userAgent,
-    start = agent.indexOf( 'OS ' );
-    if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
-        return window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
-    }
-    return 0;
-    }
-    const ro = document.getElementById('RO');
-    if(checkVersion){
-        // get ios versio as 7.1
-        ro.innerHTML=checkVersion();
-    }
+//___________________________________________________________________________________________
+    // checkVersion = function () {
+    // var agent = window.navigator.userAgent,
+    // start = agent.indexOf( 'OS ' );
+    // if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
+    //     return window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
+    // }
+    // return 0;
+    // }
+    // const ro = document.getElementById('RO');
+    // if(checkVersion){
+    //     // get ios versio as 7.1
+    //     ro.innerHTML=checkVersion();
+    // }
+//___________________________________________________________________________________________-
 
 // if(window.navigator.userAgent.match( /iP(hone|od|ad)/)){
 //     var iphone_version= parseFloat(String(window.navigator.userAgent.match(/[0-9]_[0-9]/)).split('_')[0]+'.'+String(window.navigator.userAgent.match(/[0-9]_[0-9]/)).split('_')[1]);
@@ -104,40 +105,44 @@
 //        alert('iPhone device, iOS 8 version or greater!');
 //     }
 // }
-function mobile(){
-    navigator.userAgent.match(/Android/i) || 
-    navigator.userAgent.match(/webOS/i) || 
-    navigator.userAgent.match(/iPhone/i) || 
-    navigator.userAgent.match(/iPod/i) || 
-    navigator.userAgent.match(/iPad/i) || 
-    navigator.userAgent.match(/BlackBerry/i) || 
-    navigator.userAgent.match(/Windows Phone/i)
-}
-function iOSversion() {
-  if (/iP(hone|od|ad)/.test(navigator.platform)) {
-    var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
-    return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
-  }
-}
-ver = iOSversion();
-window.addEventListener('load', function(){
-    if (navigator.userAgent.match(/Android/i) 
-    || navigator.userAgent.match(/webOS/i) 
-    || navigator.userAgent.match(/iPhone/i) 
-    || navigator.userAgent.match(/iPod/i) 
-    || navigator.userAgent.match(/BlackBerry/i) 
-    || navigator.userAgent.match(/Windows Phone/i)){
-        alert('mob')
-        if(window.navigator.userAgent.match( /iP(hone|od|ad)/)){
-            if(ver[0] >= 9){
-                alert('ios supprted')
-                appDiv.innerHTML =  ver[0];
-            } else{
-            alert('ios notsupported')
-            appDiv.innerHTML =  ver[0];
-            }
-        } 
-    }
+
+//_______________________________________________________________________
+// function mobile(){
+//     navigator.userAgent.match(/Android/i) || 
+//     navigator.userAgent.match(/webOS/i) || 
+//     navigator.userAgent.match(/iPhone/i) || 
+//     navigator.userAgent.match(/iPod/i) || 
+//     navigator.userAgent.match(/iPad/i) || 
+//     navigator.userAgent.match(/BlackBerry/i) || 
+//     navigator.userAgent.match(/Windows Phone/i)
+// }
+// function iOSversion() {
+//   if (/iP(hone|od|ad)/.test(navigator.platform)) {
+//     var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+//     return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+//   }
+// }
+// ver = iOSversion();
+//__________________________________________________________________________________________________
+// window.addEventListener('load', function(){
+//     if (navigator.userAgent.match(/Android/i) 
+//     || navigator.userAgent.match(/webOS/i) 
+//     || navigator.userAgent.match(/iPhone/i) 
+//     || navigator.userAgent.match(/iPod/i) 
+//     || navigator.userAgent.match(/BlackBerry/i) 
+//     || navigator.userAgent.match(/Windows Phone/i)){
+//         alert('mob')
+//         if(window.navigator.userAgent.match( /iP(hone|od|ad)/)){
+//             if(ver[0] >= 9){
+//                 alert('ios supprted')
+//                 appDiv.innerHTML =  ver[0];
+//             } else{
+//             alert('ios notsupported')
+//             appDiv.innerHTML =  ver[0];
+//             }
+//         } 
+//     }
+//________________________________________________________________________
     // if(mobile){
         // console.log('mobile')
         // if(iphone_version <= 9){
@@ -153,18 +158,21 @@ window.addEventListener('load', function(){
         //     })
         // }
     // } 
-    else{
-        console.log('pc')
-    }
-}, false)
+
+
+//     else{
+//         console.log('pc')
+//     }
+// }, false)
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
 <script>
     var md = new MobileDetect(window.navigator.userAgent);
     const mob = document.getElementById('MOB');
     mob.innerHTML = md.os()+md.version('iOS');
-    // ... see below
-    console.log(md.os())
+   if(md.phone().length|| md.tablet().length||md.mobile().length){
+       alert("md.mobile()")
+   }
 </script>
 
 
