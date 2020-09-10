@@ -189,19 +189,16 @@
             return false
         } return md.tablet()
     }
-    // let mo = md.mobile()
-    // let tb = md.tablet()
-    console.log(ph(), mo(), tb(), mobilePlatform)
+
+    console.log(ph(), mo(), tb())
 
 
-    if(ph() && mo() && tb()){
-            // if(md.os() === 'iOS'){
-            //     alert('ios')
-            // } else{  
-            //     alert('other mobile')
-            // }
-
-    mob.innerHTML = 'mob';
+    if(ph() || mo() || tb()){
+        if(md.os() === 'iOS'){
+            mob.innerHTML = 'ios';
+        } else{  
+            mob.innerHTML = 'other mobile';
+        }
     } else{
         mob.innerHTML = 'web';
     }
