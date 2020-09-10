@@ -58,39 +58,39 @@
 <script>
 // with jQuery
 
-$(document).ready(function() {
-	function iOSversion() {
-		if (/iP(hone|od|ad)/.test(navigator.platform)) {
-			// supports iOS 2.0 and later: <https://bit.ly/TJjs1V>
-			var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
-			return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
-		}
-	}
+// $(document).ready(function() {
+// 	function iOSversion() {
+// 		if (/iP(hone|od|ad)/.test(navigator.platform)) {
+// 			// supports iOS 2.0 and later: <https://bit.ly/TJjs1V>
+// 			var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+// 			return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+// 		}
+// 	}
 
-	ver = iOSversion();
+// 	ver = iOSversion();
 
-	if (ver[0] >= 5) {
-		alert('This is running iOS '+ver);
-		/*$('body').addClass('iOS-tagged');
-	*/}
-});
+// 	if (ver[0] >= 5) {
+// 		alert('This is running iOS '+ver);
+// 		/*$('body').addClass('iOS-tagged');
+// 	*/}
+// });
 </script>
 <script>
     const appDiv = document.getElementById('app');
     // appDiv.innerHTML = navigator.userAgent;
 
-    // checkVersion = function () {
-    // var agent = window.navigator.userAgent,
-    // start = agent.indexOf( 'OS ' );
-    // if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
-    //     return window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
-    // }
-    // return 0;
-    // }
-    // const ro = document.getElementById('RO');
-    // if(checkVersion){
-    //     ro.innerHTML=checkVersion();
-    // }
+    checkVersion = function () {
+    var agent = window.navigator.userAgent,
+    start = agent.indexOf( 'OS ' );
+    if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
+        return window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
+    }
+    return 0;
+    }
+    const ro = document.getElementById('RO');
+    if(checkVersion){
+        ro.innerHTML=checkVersion();
+    }
 
 // if(window.navigator.userAgent.match( /iP(hone|od|ad)/)){
 //     var iphone_version= parseFloat(String(window.navigator.userAgent.match(/[0-9]_[0-9]/)).split('_')[0]+'.'+String(window.navigator.userAgent.match(/[0-9]_[0-9]/)).split('_')[1]);
@@ -151,7 +151,7 @@ window.addEventListener('load', function(){
     // } 
     else{
         console.log('pc')
-        alert('loaded')
+        // alert('loaded')
     }
 }, false)
 </script>
