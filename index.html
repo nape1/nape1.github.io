@@ -162,7 +162,7 @@ window.addEventListener('load', function(){
 <script>
     var md = new MobileDetect(window.navigator.userAgent);
     const mob = document.getElementById('MOB');
-    mob.innerHTML = navigator.userAgent;
+    mob.innerHTML = md.os();
     // ... see below
     console.log(md.os())
 </script>
