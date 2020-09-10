@@ -80,21 +80,23 @@
 </script>
 <script>
     const appDiv = document.getElementById('app');
-    appDiv.innerHTML = navigator.userAgent;
-//___________________________________________________________________________________________
-    checkVersion = function () {
-    var agent = window.navigator.userAgent,
-    start = agent.indexOf( 'OS ' );
-        if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
-            console.log(window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) ));
-        }
-        return 0;
-    }
     const ro = document.getElementById('RO');
-    if(checkVersion){
-        // get ios versio as 7.1
-        ro.innerHTML=checkVersion();
-    }
+
+    appDiv.innerHTML = navigator.userAgent;
+    ro.innerHTML=window.navigator.userAgent.substr(window.navigator.userAgent.indexOf("OS") + 3,6).replaceAll('_','.');
+//___________________________________________________________________________________________
+    // checkVersion = function () {
+    // var agent = window.navigator.userAgent,
+    // start = agent.indexOf( 'OS ' );
+    //     if( ( agent.indexOf( 'iPhone' ) > -1 || agent.indexOf( 'iPad' ) > -1 ) && start > -1 ){
+    //         return window.Number( agent.substr( start + 3, 3 ).replace( '_', '.' ) );
+    //     }
+    //     return 0;
+    // }
+    // if(checkVersion){
+    //     // get ios versio as 7.1
+    //     ro.innerHTML=checkVersion();
+    // }
 //___________________________________________________________________________________________-
 
 // if(window.navigator.userAgent.match( /iP(hone|od|ad)/)){
