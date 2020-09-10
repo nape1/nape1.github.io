@@ -170,8 +170,6 @@
     var md = new MobileDetect(window.navigator.userAgent);
     const mob = document.getElementById('MOB');
     console.log(md)
-    let mobilePlatform = false;
-    let device = '';
 
     let ph = function(){
         if(!md.phone()){
@@ -189,10 +187,7 @@
             return false
         } return md.tablet()
     }
-
-    console.log(ph(), mo(), tb())
-
-
+    
     if(ph() || mo() || tb()){
         if(md.os() === 'iOS'){
             mob.innerHTML = 'ios';
