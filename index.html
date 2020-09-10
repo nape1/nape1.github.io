@@ -15,6 +15,7 @@
 
 <body>
 <div id="app"></div>
+<br/>
 <div id="RO"></div>
 <!-- <div class="mc-content-wrapper">
     <div class="con">
@@ -77,7 +78,7 @@
 </script>
 <script>
     const appDiv = document.getElementById('app');
-    // appDiv.innerHTML = navigator.userAgent;
+    appDiv.innerHTML = navigator.userAgent;
 
     checkVersion = function () {
     var agent = window.navigator.userAgent,
@@ -89,6 +90,7 @@
     }
     const ro = document.getElementById('RO');
     if(checkVersion){
+        // get ios versio as 7.1
         ro.innerHTML=checkVersion();
     }
 
