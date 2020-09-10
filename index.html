@@ -169,10 +169,18 @@
 <script>
     var md = new MobileDetect(window.navigator.userAgent);
     const mob = document.getElementById('MOB');
-    mob.innerHTML = md.os()+md.version('iOS');
-   if(md.phone().length|| md.tablet().length||md.mobile().length){
-       alert("md.mobile()")
-   }
+    mob.innerHTML = md.os()+md.version('iOS') + typeof(md.os());
+
+    window.addEventListener('load', function(){
+        if(md.phone().length|| md.tablet().length||md.mobile().length){
+            alert("md.mobile()")
+            if(md.os().includes('iOS')){
+                alert('ios')
+            }
+        }
+
+
+    },false)
 </script>
 
 
