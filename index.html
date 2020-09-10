@@ -169,7 +169,6 @@
 <script>
     var md = new MobileDetect(window.navigator.userAgent);
     const mob = document.getElementById('MOB');
-    mob.innerHTML = md.os()+md.version('iOS') + typeof(md.os());
     console.log(md)
     let mobilePlatform = false;
     let device = '';
@@ -201,9 +200,10 @@
             // } else{  
             //     alert('other mobile')
             // }
-            alert('mob')
+
+    mob.innerHTML = 'mob';
     } else{
-        alert('web')
+        mob.innerHTML = 'web';
     }
 
 
