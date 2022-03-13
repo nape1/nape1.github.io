@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@600&family=Inconsolata:wght@300&display=swap');
+html{
+    background-color: #464646;
+    color: #000;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Catamaran', sans-serif;
+
+    font-family: 'Inconsolata', monospace;
+    
+}
+#stringData{
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    white-space: pre-wrap;
+    max-height: 700px;
+    overflow: auto;
+}
+
+.color-text{
+    position: relative;
+    cursor: pointer;
+}
+.color-pop{
+    position: absolute;
+    top: 1px;
+    left: -1px;
+    width: 1ch;
+    height: 1em;
+    cursor: default;
+}
